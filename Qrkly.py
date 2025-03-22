@@ -30,11 +30,11 @@ for product_id in range(start_product, end_product + 1):
                     # Ürün adını "product" altındaki "marketHashName" alanından çekiyoruz.
                     product_name = listing.get('product', {}).get('marketHashName', 'İsim Yok')
                     price = listing.get('price', 'Fiyat Yok')
-                    print(f"\n**********************************************\nESLESME BULUNDU: {product_name}\nFiyat: {price}\nStickerlar: {sticker_names}\nAnahtar Kelime(ler): {', '.join(matching_keywords)}\n**********************************************")
+                    print(f"\n**********************************************\nESLESME BULUNDU: {product_name}\nFiyat: {price}\nStickerlar: {sticker_names}\n\nAnahtar Kelime(ler): {', '.join(matching_keywords)}\n**********************************************\n")
         else:
             print(f"Urun Numarasi {product_id} icin istek hatasi: {response.status_code}")
     except Exception as e:
         print(f"Urun Numarasi {product_id} icin hata: {e}")
     
     # Siteden banlanmayı önlemek için 2 saniye gecikme ekleniyor.
-    time.sleep(2)
+    time.sleep(1)
