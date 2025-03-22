@@ -4,7 +4,7 @@ import time
 # İncelenecek ürün numaraları ve aranacak anahtar kelimeler. Test icin start_product = 569
 start_product = 1 
 end_product = 17200
-keywords = ['titan', 'katowice 2014']
+keywords = ['titan', 'titan (holo)', 'ibuypower', 'katowice 2014', 'harp of war (holo)', 'king on the field', 'winged defuser', 'howling dawn', 'crown (foil)']
 
 for product_id in range(start_product, end_product + 1):
     url = f"https://gw.bynogame.com/steam-listings/v2/listings?limit=1000&page=1&filters=Product:{product_id}&Sort=Price:1;Score:-1"
